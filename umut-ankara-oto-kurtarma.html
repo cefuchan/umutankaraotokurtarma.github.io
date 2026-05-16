@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Umut Ankara Oto Kurtarma | 7/24 Çekici & Kurtarma Hizmeti</title>
+  <meta name="description" content="Umut Ankara Oto Kurtarma hizmeti, oto çekici ve kurtarma alanında profesyonel destek sağlar. Ankara'nın her noktasına hızlı erişimle, güvenilir ve ekonomik çözümler sunuyoruz." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red: #D11814;
+      --red-dark: #a51210;
+      --red-light: #e52d29;
+      --dark: #111111;
+      --dark2: #1e1e1e;
+      --gray: #555;
+      --light-gray: #f5f5f5;
+      --white: #ffffff;
+      --border: #e0e0e0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--dark);
+      color: #ccc;
+      font-size: 13px;
+      padding: 7px 0;
+    }
+    .topbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .topbar a { color: #ccc; transition: color .2s; }
+    .topbar a:hover { color: var(--red); }
+    .topbar-links { display: flex; gap: 20px; }
+    .topbar-social { display: flex; gap: 14px; }
+    .topbar-social a {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px; border-radius: 50%;
+      background: #333; font-size: 12px; font-weight: 700;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 75px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      width: 52px; height: 52px;
+      background: var(--red);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logo-icon svg { width: 30px; height: 30px; fill: white; }
+    .logo-text { line-height: 1.2; }
+    .logo-text .name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      color: var(--dark);
+      letter-spacing: -0.5px;
+    }
+    .logo-text .name span { color: var(--red); }
+    .logo-text .sub {
+      font-size: 11px;
+      color: var(--gray);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 13.5px;
+      color: var(--dark);
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background .2s, color .2s;
+    }
+    nav a:hover, nav a.active { background: var(--red); color: white; }
+
+    .header-phone {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-phone a {
+      background: var(--red);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      padding: 10px 22px;
+      border-radius: 8px;
+      transition: background .2s, transform .1s;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .header-phone a:hover { background: var(--red-dark); transform: scale(1.03); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px; cursor: pointer; padding: 6px;
+    }
+    .hamburger span {
+      display: block; width: 26px; height: 3px;
+      background: var(--dark); border-radius: 2px;
+      transition: all .3s;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #2a0000 50%, var(--red-dark) 100%);
+      color: white;
+      padding: 80px 20px 90px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+    }
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--red-light); }
+    .hero p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #ddd;
+      margin-bottom: 32px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      transition: all .2s;
+      cursor: pointer; border: none;
+    }
+    .btn-red { background: var(--red); color: white; }
+    .btn-red:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(209,24,20,.4); }
+    .btn-outline { background: transparent; color: white; border: 2px solid white; }
+    .btn-outline:hover { background: white; color: var(--dark); transform: translateY(-2px); }
+
+    .hero-image {
+      position: relative;
+      text-align: center;
+    }
+    .hero-image-box {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-truck-svg {
+      width: 100%; max-width: 380px;
+    }
+
+    /* ── BADGES ── */
+    .badges-row {
+      background: var(--red);
+      color: white;
+      padding: 18px 20px;
+    }
+    .badges-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .badge-item {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .badge-icon { font-size: 22px; }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 80px 20px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(24px, 3vw, 36px);
+      color: var(--dark);
+      margin-bottom: 14px;
+    }
+    .section-title span { color: var(--red); }
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--gray);
+      line-height: 1.6;
+      margin-bottom: 48px;
+      max-width: 620px;
+    }
+    .divider {
+      width: 56px; height: 4px;
+      background: var(--red);
+      border-radius: 2px;
+      margin-bottom: 16px;
+    }
+
+    /* ── WHY US ── */
+    .why-us { background: var(--light-gray); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+    }
+    .why-card {
+      background: white;
+      border-radius: 14px;
+      padding: 32px 28px;
+      border-bottom: 4px solid var(--red);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .why-card:hover { transform: translateY(-6px); box-shadow: 0 14px 40px rgba(0,0,0,.1); }
+    .why-icon {
+      font-size: 38px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .why-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+    .why-card p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+
+    /* ── HOW IT WORKS ── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0;
+      position: relative;
+    }
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 40px; left: 10%; right: 10%; height: 3px;
+      background: linear-gradient(90deg, var(--red), var(--red-light));
+      border-radius: 2px;
+    }
+    .step {
+      text-align: center;
+      padding: 0 24px 24px;
+      position: relative;
+    }
+    .step-num {
+      width: 80px; height: 80px;
+      background: var(--red);
+      color: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 26px;
+      margin: 0 auto 22px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 6px 20px rgba(209,24,20,.3);
+    }
+    .step h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+    .step p { font-size: 13.5px; color: var(--gray); line-height: 1.6; }
+
+    /* ── SERVICES ── */
+    .services-bg { background: var(--dark); color: white; }
+    .services-bg .section-title { color: white; }
+    .services-bg .section-subtitle { color: #aaa; }
+    .services-bg .divider { background: var(--red); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--dark2);
+      border: 1px solid #333;
+      border-radius: 14px;
+      padding: 30px 26px;
+      transition: border-color .2s, transform .2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--red);
+      transform: scaleX(0);
+      transition: transform .3s;
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover { border-color: var(--red); transform: translateY(-4px); }
+    .service-icon { font-size: 36px; margin-bottom: 16px; display: block; }
+    .service-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: white;
+      margin-bottom: 10px;
+    }
+    .service-card p { font-size: 14px; color: #999; line-height: 1.6; }
+
+    /* ── SITUATIONS ── */
+    .situations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .situation-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 22px;
+      transition: box-shadow .2s, border-color .2s;
+    }
+    .situation-item:hover { border-color: var(--red); box-shadow: 0 6px 20px rgba(209,24,20,.1); }
+    .sit-num {
+      min-width: 40px; height: 40px;
+      background: var(--red);
+      color: white;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 16px;
+    }
+    .situation-item h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .situation-item p { font-size: 13.5px; color: var(--gray); line-height: 1.6; }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+    .contact-info-box {
+      background: var(--light-gray);
+      border-radius: 16px;
+      padding: 36px;
+    }
+    .contact-item {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 22px;
+    }
+    .contact-item:last-child { margin-bottom: 0; }
+    .contact-ico {
+      width: 46px; height: 46px; min-width: 46px;
+      background: var(--red);
+      color: white;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .contact-item h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: 4px;
+    }
+    .contact-item a, .contact-item span {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 17px;
+      color: var(--dark);
+    }
+    .contact-item a:hover { color: var(--red); }
+    .map-frame {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 340px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.12);
+    }
+    .map-frame iframe { width: 100%; height: 100%; border: none; }
+
+    .cta-phones {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .cta-phone-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--red);
+      color: white;
+      border-radius: 10px;
+      padding: 14px 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 17px;
+      transition: background .2s, transform .1s;
+    }
+    .cta-phone-btn:hover { background: var(--red-dark); transform: scale(1.04); }
+    .cta-phone-btn.whatsapp { background: #25D366; }
+    .cta-phone-btn.whatsapp:hover { background: #1faf57; }
+
+    /* ── ABOUT STRIP ── */
+    .about-strip {
+      background: var(--red);
+      color: white;
+      padding: 60px 20px;
+    }
+    .about-strip-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .about-strip h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .about-strip p { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,.85); }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .stat-box {
+      background: rgba(255,255,255,.15);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .stat-box .num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 34px;
+      display: block;
+    }
+    .stat-box .label { font-size: 13px; color: rgba(255,255,255,.8); margin-top: 4px; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--dark); color: #ccc; padding: 60px 20px 30px; }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #333;
+      margin-bottom: 30px;
+    }
+    .footer-brand .logo-text .name { color: white; }
+    .footer-brand p {
+      font-size: 14px; line-height: 1.6; color: #999;
+      margin-top: 16px; margin-bottom: 22px;
+    }
+    .footer-social { display: flex; gap: 10px; }
+    .footer-social a {
+      width: 38px; height: 38px;
+      background: #333; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 700; color: #ccc;
+      transition: background .2s, color .2s;
+    }
+    .footer-social a:hover { background: var(--red); color: white; }
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: 18px;
+    }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul a { font-size: 14px; color: #999; transition: color .2s; }
+    .footer-col ul a:hover { color: var(--red); }
+    .footer-bottom {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+    .footer-bottom span { color: var(--red); }
+
+    /* ── FLOATING BUTTONS ── */
+    .floating-btns {
+      position: fixed;
+      bottom: 24px; right: 24px;
+      display: flex; flex-direction: column; gap: 12px;
+      z-index: 999;
+    }
+    .float-btn {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.3);
+      transition: transform .2s, box-shadow .2s;
+      color: white;
+    }
+    .float-btn:hover { transform: scale(1.12); box-shadow: 0 8px 28px rgba(0,0,0,.4); }
+    .float-phone { background: var(--red); }
+    .float-whatsapp { background: #25D366; }
+
+    /* ── MOBILE NAV ── */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.95);
+      z-index: 2000;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: white;
+      padding: 12px 40px;
+      border-radius: 10px;
+      transition: background .2s;
+      width: 260px;
+      text-align: center;
+    }
+    .mobile-nav a:hover { background: var(--red); }
+    .mobile-nav-close {
+      position: absolute; top: 24px; right: 24px;
+      font-size: 32px; color: white; cursor: pointer; background: none; border: none;
+    }
+
+    /* ── GALLERY ── */
+    .gallery-section { background: var(--white); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .gallery-slot {
+      border-radius: 14px;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: var(--light-gray);
+    }
+    .gallery-slot img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 700px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 420px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .about-strip-inner { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      nav { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .topbar-links { display: none; }
+      .badges-inner { gap: 8px; }
+      .badge-item { font-size: 12px; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .cta-phones { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-links">
+      <a href="#iletisim">İletişim Bilgileri</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+    </div>
+    <div class="topbar-social">
+      <a href="#">f</a>
+      <a href="#">𝕏</a>
+      <a href="#">▶</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 20l2-8h16l2 8H2zm18-10h5l3 4v6h-8V10zm-16 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm16 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <div class="name">UMUT <span>ANKARA</span></div>
+        <div class="sub">Oto Kurtarma & Çekici</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#" class="active">Anasayfa</a>
+      <a href="./hizmetlerimiz.html">Hizmetlerimiz</a>
+      <a href="./bolgelerimiz.html">Bölgelerimiz</a>
+      <a href="./sss.html">S.S.S</a>
+      <a href="./iletisim.html">İletişim</a>
+    </nav>
+    <div class="header-phone">
+      <a href="tel:+905439561988">
+        📞 +90 543 956 19 88
+      </a>
+    </div>
+    <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.add('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav">
+  <button class="mobile-nav-close" onclick="document.querySelector('.mobile-nav').classList.remove('open')">✕</button>
+  <a href="#" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Anasayfa</a>
+  <a href="#hizmetler" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Hizmetlerimiz</a>
+  <a href="#bolgeler" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Bölgelerimiz</a>
+  <a href="#sss" onclick="document.querySelector('.mobile-nav').classList.remove('open')">S.S.S</a>
+  <a href="#iletisim" onclick="document.querySelector('.mobile-nav').classList.remove('open')">İletişim</a>
+  <a href="tel:+905439561988" style="background:var(--red); margin-top:10px;">📞 +90 543 956 19 88</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1>Umut Ankara<br /><span>Oto Kurtarma</span></h1>
+      <p>Ankara sınırları içinde yolda kalan veya taşınması gereken araçlara profesyonel çekici ve kurtarma desteği sunuyoruz. 7/24 hizmet, hızlı müdahale, uygun fiyat.</p>
+      <div class="hero-btns">
+        <a href="tel:+905439561988" class="btn btn-red">📞 Hemen Ara</a>
+        <a href="https://wa.me/905433473149" class="btn btn-outline">💬 WhatsApp Gönder</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-image-box">
+        <!-- BURAYA KENDİ GORSELİNİ EKLE: src="gorselinizin-yolu.png" -->
+        <img src="./images/iletisim.jpeg" alt="Umut Ankara Oto Kurtarma" style="width:100%; border-radius:14px; display:block;" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BADGES -->
+<div class="badges-row">
+  <div class="badges-inner">
+    <div class="badge-item"><span class="badge-icon">⏱️</span> 30 Dakikada Yanınızda</div>
+    <div class="badge-item"><span class="badge-icon">📅</span> 7/24 Kesintisiz Hizmet</div>
+    <div class="badge-item"><span class="badge-icon">🛡️</span> Sigortalı Taşıma</div>
+    <div class="badge-item"><span class="badge-icon">💰</span> Uygun & Şeffaf Fiyat</div>
+    <div class="badge-item"><span class="badge-icon">🏆</span> 20+ Yıl Deneyim</div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="why-us" id="hakkimizda">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2 class="section-title">Neden <span>Bizi</span> Tercih Etmelisiniz?</h2>
+    <p class="section-subtitle">Yılların deneyimi ve profesyonel ekibimizle Ankara'nın her noktasında güvenilir çekici ve kurtarma hizmeti sunuyoruz.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon">🏅</span>
+        <h3>20+ Yıl Deneyim</h3>
+        <p>20 yılı aşkın sektör tecrübesiyle her türlü araç kurtarma ve çekici ihtiyacınıza profesyonelce çözüm üretiyoruz.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">⚡</span>
+        <h3>Hızlı Müdahale</h3>
+        <p>Çağrınızı aldıktan sonra 30 dakika veya daha kısa sürede yanınızda oluyoruz. Her dakika değerlidir.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">💎</span>
+        <h3>Şeffaf Fiyatlandırma</h3>
+        <p>Sıfır gizli ücret politikamızla, hizmet öncesinde net fiyat bilgisi sunarak sürpriz faturalardan koruyoruz.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">😊</span>
+        <h3>Profesyonel Ekip</h3>
+        <p>Güleryüzlü, deneyimli ve eğitimli kadromuz zor anlarda yanınızda, aracınıza en özenli şekilde hizmet verir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2 class="section-title">Nasıl <span>Çalışır?</span></h2>
+    <p class="section-subtitle">3 kolay adımda çekici ve kurtarma hizmetimizden yararlanın.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Bizi Arayın!</h3>
+        <p>Web sitemizdeki iletişim numaralarından 7/24 bize ulaşın. Uzman ekibimiz sizi karşılayacaktır.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Konumunuzu Gönderin!</h3>
+        <p>WhatsApp üzerinden konumunuzu gönderin; ekibimiz dakikalar içinde yola çıksın.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>7/24 Hizmet Alın!</h3>
+        <p>Umut Ankara Oto Kurtarma ekibi en kısa sürede konumunuza gelerek hizmete başlar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-bg" id="hizmetler">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2 class="section-title">Hizmetlerimiz</h2>
+    <p class="section-subtitle">Her türlü araç ve durum için kapsamlı yol yardım ve kurtarma hizmetleri sunuyoruz.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🚛</span>
+        <h3>Oto Çekici</h3>
+        <p>Ankara içi ve şehirler arası her türlü araç çekimi. Binek, SUV, ticari araç fark etmeksizin profesyonel taşıma.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔧</span>
+        <h3>Oto Kurtarma</h3>
+        <p>Yolda kalan, kaza yapan veya çukura düşen araçlar için uzman ekipman ve deneyimli personelle kurtarma hizmeti.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔋</span>
+        <h3>Akü Takviye</h3>
+        <p>Aküsü boşalan aracınızı yerinde takviye ederek tekrar çalışır hale getiriyoruz. Hızlı ve güvenli çözüm.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">⛽</span>
+        <h3>Yakıt İkmal</h3>
+        <p>Benzin veya dizel yakıtınız bittiğinde bölgenize en kısa sürede yakıt ikmal hizmeti sağlıyoruz.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔩</span>
+        <h3>Lastik Değişimi</h3>
+        <p>Lastik patlaması veya inişi durumunda yerinde lastik değişimi yaparak yolunuza devam etmenizi sağlıyoruz.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🏙️</span>
+        <h3>Şehirlerarası Taşıma</h3>
+        <p>Ankara'dan diğer illere veya diğer illerden Ankara'ya güvenli araç taşıma ve transfer hizmeti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SITUATIONS -->
+<section id="bolgeler" style="background: var(--light-gray);">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2 class="section-title">Çekici Hizmeti <span>Hangi Durumlarda</span> Gerekir?</h2>
+    <p class="section-subtitle">Ankara trafiğinde ve yollarında karşılaşabileceğiniz her türlü acil durumda yanınızdayız.</p>
+    <div class="situations-grid">
+      <div class="situation-item">
+        <div class="sit-num">1</div>
+        <div>
+          <h4>Kaza Durumları</h4>
+          <p>Ankara trafiğinde kazalar sıkça yaşanabilir ve hasarlı araçların güvenli şekilde taşınması gerekir.</p>
+        </div>
+      </div>
+      <div class="situation-item">
+        <div class="sit-num">2</div>
+        <div>
+          <h4>Arıza Durumları</h4>
+          <p>Mekanik bir arıza, araç sahiplerinin sıkça çekici yardımı almasına neden olur. Hızla müdahale ediyoruz.</p>
+        </div>
+      </div>
+      <div class="situation-item">
+        <div class="sit-num">3</div>
+        <div>
+          <h4>Yakıt & Akü Sorunları</h4>
+          <p>Yakıt bitmesi veya akü boşalması gibi durumlarda hızlı çözüm sunmak için hazırız.</p>
+        </div>
+      </div>
+      <div class="situation-item">
+        <div class="sit-num">4</div>
+        <div>
+          <h4>Lastik Patlaması</h4>
+          <p>Özellikle Ankara yollarında lastik patlamaları sürücüleri yolda bırakabilir. Yerinde yardım ediyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<div class="about-strip">
+  <div class="about-strip-inner">
+    <div>
+      <h2>Ankara'nın Güvenilir Oto Kurtarma Hizmeti</h2>
+      <p>Umut Ankara Oto Kurtarma olarak yıllardır binlerce sürücüye yol yardım ve çekici hizmeti sağlıyoruz. Ankara'nın tüm ilçe ve mahallelerine hızla ulaşabilen araç filomuz ve deneyimli ekibimizle her zaman yanınızdayız.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <span class="num">20+</span>
+        <span class="label">Yıl Deneyim</span>
+      </div>
+      <div class="stat-box">
+        <span class="num">10K+</span>
+        <span class="label">Mutlu Müşteri</span>
+      </div>
+      <div class="stat-box">
+        <span class="num">30dk</span>
+        <span class="label">Ortalama Varış</span>
+      </div>
+      <div class="stat-box">
+        <span class="num">7/24</span>
+        <span class="label">Kesintisiz Hizmet</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="iletisim">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2 class="section-title">İletişim <span>Bilgilerimiz</span></h2>
+    <p class="section-subtitle">Yolda kaldınız mı? Hemen arayın ya da WhatsApp'tan konum gönderin.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-box">
+          <div class="contact-item">
+            <div class="contact-ico">📍</div>
+            <div>
+              <h5>Adres</h5>
+              <span>Elvan mahallesi 1544 143/A</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-ico">📞</div>
+            <div>
+              <h5>Telefon</h5>
+              <a href="tel:+905439561988">+90 543 956 19 88</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-ico">✉️</div>
+            <div>
+              <h5>E-Posta</h5>
+              <a href="mailto:info@umutankaraotokurtarma.com">info@umutankaraotokurtarma.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="cta-phones">
+          <a href="tel:+905439561988" class="cta-phone-btn">📞 +90 543 956 19 88</a>
+          <a href="https://wa.me/905433473149" class="cta-phone-btn whatsapp">💬 WhatsApp</a>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195995.84187084835!2d32.475205065553844!3d39.86449242637925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3385207a0de51%3A0x940f5661caf9866c!2sAnkara!5e0!3m2!1str!2str!4v1746556553400!5m2!1str!2str"
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="galeri">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2 class="section-title">Galeri<span>miz</span></h2>
+    <p class="section-subtitle">Çekici ve kurtarma hizmetlerimizden kareler.</p>
+    <div class="gallery-grid">
+      <!-- BURAYA KENDİ GORSELLERİNİ EKLE: src="gorselinizin-yolu.png" -->
+      <div class="gallery-slot"><img src="./images/WhatsApp Image 2026-05-07 at 10.28.35 (2).jpeg" alt="Galeri 1" /></div>
+      <div class="gallery-slot"><img src="./images/WhatsApp Image 2026-05-07 at 10.28.35 (3).jpeg" alt="Galeri 2" /></div>
+      <div class="gallery-slot"><img src="./images/WhatsApp Image 2026-05-07 at 10.28.35 (4).jpeg" alt="Galeri 3" /></div>
+      <div class="gallery-slot"><img src="./images/WhatsApp Image 2026-05-07 at 10.28.35.jpeg" alt="Galeri 4" /></div>
+      <div class="gallery-slot"><img src="./images/WhatsApp Image 2026-05-07 at 10.28.36 (1).jpeg" alt="Galeri 5" /></div>
+      <div class="gallery-slot"><img src="./images/WhatsApp Image 2026-05-07 at 10.28.36 (2).jpeg" alt="Galeri 6" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="sss" style="background: var(--light-gray);">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2 class="section-title">Sıkça Sorulan <span>Sorular</span></h2>
+    <p class="section-subtitle">Merak ettiğiniz konularda hızlı yanıtlar.</p>
+    <div style="max-width: 760px;">
+      <details style="background:white; border-radius:12px; padding:20px 24px; margin-bottom:12px; border:1px solid #e0e0e0; cursor:pointer;">
+        <summary style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:var(--dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          Kaç dakikada geliyorsunuz? <span style="color:var(--red); font-size:20px;">＋</span>
+        </summary>
+        <p style="margin-top:14px; font-size:14px; color:var(--gray); line-height:1.7;">Çağrınızı aldıktan sonra ortalama 30 dakika içinde konumunuza ulaşıyoruz. Yoğunluk ve mesafeye göre süre değişebilir.</p>
+      </details>
+      <details style="background:white; border-radius:12px; padding:20px 24px; margin-bottom:12px; border:1px solid #e0e0e0; cursor:pointer;">
+        <summary style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:var(--dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          Gece de hizmet veriyor musunuz? <span style="color:var(--red); font-size:20px;">＋</span>
+        </summary>
+        <p style="margin-top:14px; font-size:14px; color:var(--gray); line-height:1.7;">Evet! 7/24, yılın 365 günü hizmet veriyoruz. Gece ya da gündüz fark etmeksizin hemen arayabilirsiniz.</p>
+      </details>
+      <details style="background:white; border-radius:12px; padding:20px 24px; margin-bottom:12px; border:1px solid #e0e0e0; cursor:pointer;">
+        <summary style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:var(--dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          Fiyatlarınız nasıl belirleniyor? <span style="color:var(--red); font-size:20px;">＋</span>
+        </summary>
+        <p style="margin-top:14px; font-size:14px; color:var(--gray); line-height:1.7;">Fiyatlar mesafe, araç tipi ve hizmet türüne göre belirlenir. Hizmet öncesinde net fiyat bilgisi verilir; gizli ücret yoktur.</p>
+      </details>
+      <details style="background:white; border-radius:12px; padding:20px 24px; margin-bottom:12px; border:1px solid #e0e0e0; cursor:pointer;">
+        <summary style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:var(--dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          Hangi araç tiplerinde hizmet veriyorsunuz? <span style="color:var(--red); font-size:20px;">＋</span>
+        </summary>
+        <p style="margin-top:14px; font-size:14px; color:var(--gray); line-height:1.7;">Binek otomobiller, SUV'lar, hafif ticari araçlar, motosikletler ve daha fazlası için çekici ve kurtarma hizmeti sunuyoruz.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 20l2-8h16l2 8H2zm18-10h5l3 4v6h-8V10zm-16 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm16 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <div class="name" style="color:white;">UMUT <span>ANKARA</span></div>
+            <div class="sub">Oto Kurtarma & Çekici</div>
+          </div>
+        </div>
+        <p>Umut Ankara Oto Kurtarma hizmeti, yol yardımı, oto çekici ve kurtarma alanında profesyonel destek sağlar. Ankara'nın her noktasına hızlı erişimle, güvenilir ve ekonomik çözümler sunuyoruz.</p>
+        <div class="footer-social">
+          <a href="#">f</a>
+          <a href="#">𝕏</a>
+          <a href="#">▶</a>
+          <a href="#">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Hızlı Menü</h4>
+        <ul>
+          <li><a href="#">Anasayfa</a></li>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
+          <li><a href="#sss">Sıkça Sorulan Sorular</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hizmetlerimiz</h4>
+        <ul>
+          <li><a href="#hizmetler">Oto Çekici</a></li>
+          <li><a href="#hizmetler">En Yakın Çekici</a></li>
+          <li><a href="#hizmetler">Oto Kurtarma</a></li>
+          <li><a href="#hizmetler">Çekici Fiyatları</a></li>
+          <li><a href="#hizmetler">Akü Takviye</a></li>
+          <li><a href="#hizmetler">Lastik Yardım</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 <span>umutankaraotokurtarma.com</span> Tüm hakları saklıdır. &nbsp;|&nbsp; <a href="tel:+905439561988" style="color:var(--red);">+90 543 956 19 88</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-btns">
+  <a href="https://wa.me/905433473149" class="float-btn float-whatsapp" title="WhatsApp">💬</a>
+  <a href="tel:+905439561988" class="float-btn float-phone" title="Ara">📞</a>
+</div>
+
+</body>
+</html>

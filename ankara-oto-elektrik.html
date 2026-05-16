@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Ankara Oto Elektrik | Umut Ankara Oto Kurtarma</title>
+  <meta name="description" content="Ankara oto elektrik hizmetleriyle akü, alternatör, kablolama sorunlarını çözyorum. 7/24 yol yardım ve elektrik tamirat." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --red:#D11814; --red-dark:#a51210; --red-light:#e52d29; --dark:#111111; --dark2:#1e1e1e; --gray:#555; --light-gray:#f5f5f5; --white:#ffffff; --border:#e0e0e0; }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Open Sans',sans-serif; color:var(--dark); background:var(--white); overflow-x:hidden; }
+    a { text-decoration:none; color:inherit; }
+    ul { list-style:none; }
+    .topbar { background:var(--dark); color:#ccc; font-size:13px; padding:7px 0; }
+    .topbar-inner { max-width:1200px; margin:0 auto; padding:0 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; }
+    .topbar a { color:#ccc; transition:color .2s; }
+    .topbar a:hover { color:var(--red); }
+    .topbar-links { display:flex; gap:20px; }
+    .topbar-social { display:flex; gap:14px; }
+    .topbar-social a { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:#333; font-size:12px; font-weight:700; }
+    header { background:var(--white); box-shadow:0 2px 10px rgba(0,0,0,.08); position:sticky; top:0; z-index:1000; }
+    .header-inner { max-width:1200px; margin:0 auto; padding:0 20px; display:flex; justify-content:space-between; align-items:center; height:75px; }
+    .logo { display:flex; align-items:center; gap:12px; }
+    .logo-icon { width:52px; height:52px; background:var(--red); border-radius:10px; display:flex; align-items:center; justify-content:center; }
+    .logo-icon svg { width:30px; height:30px; fill:white; }
+    .logo-text { line-height:1.2; }
+    .logo-text .name { font-family:'Montserrat',sans-serif; font-weight:900; font-size:18px; color:var(--dark); letter-spacing:-0.5px; }
+    .logo-text .name span { color:var(--red); }
+    .logo-text .sub { font-size:11px; color:var(--gray); font-weight:600; text-transform:uppercase; letter-spacing:1px; }
+    nav { display:flex; align-items:center; gap:4px; }
+    nav a { font-family:'Montserrat',sans-serif; font-weight:600; font-size:13.5px; color:var(--dark); padding:8px 14px; border-radius:6px; transition:background .2s, color .2s; }
+    nav a:hover, nav a.active { background:var(--red); color:white; }
+    .header-phone a { background:var(--red); color:white; font-family:'Montserrat',sans-serif; font-weight:800; font-size:16px; padding:10px 22px; border-radius:8px; display:flex; align-items:center; gap:8px; transition:background .2s, transform .1s; }
+    .header-phone a:hover { background:var(--red-dark); transform:scale(1.03); }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; }
+    .hamburger span { display:block; width:26px; height:3px; background:var(--dark); border-radius:2px; }
+    .page-banner { background:linear-gradient(135deg,var(--dark) 0%,#2a0000 50%,var(--red-dark) 100%); color:white; padding:60px 20px; position:relative; overflow:hidden; }
+    .page-banner::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .page-banner-inner { max-width:1200px; margin:0 auto; position:relative; }
+    .breadcrumb { display:flex; align-items:center; gap:8px; font-size:13px; color:rgba(255,255,255,.6); margin-bottom:14px; }
+    .breadcrumb a { color:rgba(255,255,255,.6); }
+    .breadcrumb a:hover { color:white; }
+    .breadcrumb span { color:rgba(255,255,255,.3); }
+    .page-banner h1 { font-family:'Montserrat',sans-serif; font-weight:900; font-size:clamp(28px,4vw,46px); line-height:1.1; }
+    .page-banner h1 em { font-style:normal; color:var(--red-light); }
+    .page-banner p { font-size:16px; color:rgba(255,255,255,.75); margin-top:12px; max-width:580px; line-height:1.6; }
+    .section-inner { max-width:1200px; margin:0 auto; }
+    .section-title { font-family:'Montserrat',sans-serif; font-weight:900; font-size:clamp(24px,3vw,36px); color:var(--dark); margin-bottom:14px; }
+    .section-title span { color:var(--red); }
+    .section-subtitle { font-size:16px; color:var(--gray); line-height:1.6; margin-bottom:32px; max-width:720px; }
+    .divider { width:56px; height:4px; background:var(--red); border-radius:2px; margin-bottom:16px; }
+    .service-grid { display:grid; gap:24px; grid-template-columns:repeat(3,minmax(220px,1fr)); margin-top:24px; }
+    .service-card { background:#fff; border:1px solid #ececec; border-radius:18px; padding:26px; box-shadow:0 18px 40px rgba(0,0,0,.04); transition:transform .2s; }
+    .service-card:hover { transform:translateY(-5px); }
+    .service-card h3 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:18px; margin-bottom:12px; }
+    .service-card p { color:var(--gray); line-height:1.75; font-size:14px; }
+    .cta-box { background:var(--red); color:white; border-radius:24px; padding:34px 28px; display:grid; gap:18px; }
+    .cta-box a { display:inline-flex; background:white; color:var(--dark); padding:14px 24px; border-radius:10px; font-weight:700; box-shadow:0 16px 34px rgba(0,0,0,.12); }
+    footer { background:var(--dark); color:#ccc; padding:60px 20px 30px; }
+    .footer-inner { max-width:1200px; margin:0 auto; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid #333; margin-bottom:30px; }
+    .footer-brand p { font-size:14px; line-height:1.6; color:#999; margin-top:16px; margin-bottom:22px; }
+    .footer-social { display:flex; gap:10px; }
+    .footer-social a { width:38px; height:38px; background:#333; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:700; color:#ccc; transition:background .2s, color .2s; }
+    .footer-social a:hover { background:var(--red); color:white; }
+    .footer-col h4 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:14px; color:white; text-transform:uppercase; letter-spacing:.5px; margin-bottom:18px; }
+    .footer-col ul li { margin-bottom:10px; }
+    .footer-col ul a { font-size:14px; color:#999; transition:color .2s; }
+    .footer-col ul a:hover { color:var(--red); }
+    .footer-bottom { text-align:center; font-size:13px; color:#666; }
+    .footer-bottom span { color:var(--red); }
+    .floating-btns { position:fixed; bottom:24px; right:24px; display:flex; flex-direction:column; gap:12px; z-index:999; }
+    .float-btn { width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:24px; box-shadow:0 4px 18px rgba(0,0,0,.3); transition:transform .2s; color:white; }
+    .float-btn:hover { transform:scale(1.12); }
+    .float-phone { background:var(--red); }
+    .float-whatsapp { background:#25D366; }
+    .mobile-nav { display:none; position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:2000; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+    .mobile-nav.open { display:flex; }
+    .mobile-nav a { font-family:'Montserrat',sans-serif; font-weight:800; font-size:22px; color:white; padding:12px 40px; border-radius:10px; width:260px; text-align:center; }
+    .mobile-nav a:hover { background:var(--red); }
+    .mobile-nav-close { position:absolute; top:24px; right:24px; font-size:32px; color:white; cursor:pointer; background:none; border:none; }
+    @media (max-width:900px) { .footer-grid { grid-template-columns:1fr; } nav { display:none; } .hamburger { display:flex; } .service-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:700px) { .page-banner { padding:50px 16px; } .service-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .topbar-links { display:none; } }
+  </style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner"><div class="topbar-links"><a href="iletisim.html">İletişim Bilgileri</a><a href="umut-ankara-oto-kurtarma.html">Anasayfa</a></div><div class="topbar-social"><a href="#">f</a><a href="#">𝕏</a><a href="#">▶</a></div></div></div>
+<header><div class="header-inner"><div class="logo"><div class="logo-icon"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M2 20l2-8h16l2 8H2zm18-10h5l3 4v6h-8V10zm-16 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm16 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/></svg></div><div class="logo-text"><div class="name">UMUT <span>ANKARA</span></div><div class="sub">Oto Kurtarma &amp; Çekici</div></div></div><nav><a href="umut-ankara-oto-kurtarma.html">Anasayfa</a><a href="hizmetlerimiz.html" class="active">Hizmetlerimiz</a><a href="bolgelerimiz.html">Bölgelerimiz</a><a href="sss.html">S.S.S</a><a href="iletisim.html">İletişim</a></nav><div class="header-phone"><a href="tel:+905439561988">📞 +90 543 956 19 88</a></div><div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.add('open')"><span></span><span></span><span></span></div></div></header>
+<div class="mobile-nav"><button class="mobile-nav-close" onclick="document.querySelector('.mobile-nav').classList.remove('open')">✕</button><a href="umut-ankara-oto-kurtarma.html" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Anasayfa</a><a href="hizmetlerimiz.html" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Hizmetlerimiz</a><a href="bolgelerimiz.html" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Bölgelerimiz</a><a href="sss.html" onclick="document.querySelector('.mobile-nav').classList.remove('open')">S.S.S</a><a href="iletisim.html" onclick="document.querySelector('.mobile-nav').classList.remove('open')">İletişim</a><a href="tel:+905439561988" style="background:var(--red);margin-top:10px;">📞 +90 543 956 19 88</a></div>
+<div class="page-banner"><div class="page-banner-inner"><div class="breadcrumb"><a href="umut-ankara-oto-kurtarma.html">Anasayfa</a><span>›</span><span>Ankara Oto Elektrik</span></div><h1>Ankara'da <em>Oto Elektrik</em> Hizmeti</h1><p>Akü, alternatör ve elektrik sistemleri sorunlarında hızlı çözüm sunuyoruz.</p></div></div>
+<div class="page-content"><div class="section-inner" style="padding:80px 20px;"><section><div class="divider"></div><h2 class="section-title">Ankara Oto <span>Elektrik</span></h2><p class="section-subtitle">Araç elektrik sistemlerinde yaşanan sorunları yerinde çözyoruz.</p><p>Umut Ankara oto elektrik ekibi, akü takviyesinden alternatör onarımına kadar tüm elektrik sorunlarında hizmet sunmaktadır.</p></section><section><div class="divider"></div><h2 class="section-title">Elektrik <span>Hizmetlerimiz</span></h2><p class="section-subtitle">Ankara'da oto elektrik onarım ve yol yardım hizmetleri sunuyoruz.</p><div class="service-grid"><div class="service-card"><h3>Akü Takviyesi</h3><p>Arızalı akü batarya takviyesi yaplyoruz.</p></div><div class="service-card"><h3>Alternatör Onarımı</h3><p>Alternatör ve şarj sistemi sorunlarını çözyoruz.</p></div><div class="service-card"><h3>Kablolama Kontrol</h3><p>Elektrik kablolama ve koneksiyonları kontrol ediyoruz.</p></div></div></section><section><div class="divider"></div><h2 class="section-title">Neden <span>Oto Elektrik</span>?</h2><p class="section-subtitle">Ankara'da oto elektrik sorunlarında güvenilir ve profesyonel hizmet alabilirsiniz.</p><ul class="district-list" style="margin-top:16px;"><li>Profesyonel elektrikçiler</li><li>Hızlı tanı ve onarım</li><li>7/24 yol yardım</li><li>Uygun fiyatlar</li><li>Kaliteli parça kullanımı</li></ul></section><section><div class="divider"></div><div class="cta-box"><h3>Elektrik Sorunu Var mı?</h3><p>Araç elektrik sisteminizde sorun yaşıyorsanız hemen bize ulaşın.</p><a href="tel:+905439561988">📞 +90 543 956 19 88</a></div></section></div></div>
+<footer><div class="footer-inner"><div class="footer-grid"><div class="footer-brand"><div class="logo"><div class="logo-icon"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M2 20l2-8h16l2 8H2zm18-10h5l3 4v6h-8V10zm-16 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm16 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/></svg></div><div class="logo-text"><div class="name">UMUT <span>ANKARA</span></div><div class="sub">Oto Kurtarma &amp; Çekici</div></div></div><p>Umut Ankara Oto Kurtarma; Ankara'da çekici, kurtarma ve yol yardım hizmetleri sunar.</p><div class="footer-social"><a href="#">f</a><a href="#">𝕏</a><a href="#">▶</a><a href="#">in</a></div></div><div class="footer-col"><h4>Hızlı Menü</h4><ul><li><a href="umut-ankara-oto-kurtarma.html">Anasayfa</a></li><li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li><li><a href="bolgelerimiz.html">Bölgelerimiz</a></li><li><a href="sss.html">S.S.S</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div><div class="footer-col"><h4>Hizmetlerimiz</h4><ul><li><a href="hizmetlerimiz.html">Oto Çekici</a></li><li><a href="hizmetlerimiz.html">Oto Kurtarma</a></li><li><a href="hizmetlerimiz.html">Akü Takviye</a></li><li><a href="hizmetlerimiz.html">Lastik Yardım</a></li><li><a href="hizmetlerimiz.html">Yakıt İkmal</a></li></ul></div></div><div class="footer-bottom">© 2025 <span>umutankaraotokurtarma.com</span> Tüm hakları saklıdır. &nbsp;|&nbsp; <a href="tel:+905439561988" style="color:var(--red);">+90 543 956 19 88</a></div></div></footer>
+<div class="floating-btns"><a href="https://wa.me/905433473149" class="float-btn float-whatsapp">💬</a><a href="tel:+905439561988" class="float-btn float-phone">📞</a></div>
+</body>
+</html>
